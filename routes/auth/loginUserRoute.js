@@ -27,20 +27,20 @@ router.post(
 router.post(
   "/createUser",
   [
-    check("name", "El nombre es obligatorio.").not().isEmpty(),
+    // check("name", "El nombre es obligatorio.").not().isEmpty(),
     check("email", "El correo electrónico  es obligatorio.").isEmail(),
     check("password", "La contraseña debe tener mínimo 6 caracteres.").isLength(
       {
         min: 6,
       }
     ),
-    check("lastname", "El apellido  es obligatorio.").not().isEmpty(),
-    check("country", "El país es obligatorio.").not().isEmpty(),
-    check("phone", "El teléfono debe ser un número válido.")
-      .optional()
-      .isNumeric(),
-    check("city", "La cuidad es obligatoria.").not().isEmpty(),
-    validateFields,
+    // check("lastname", "El apellido  es obligatorio.").not().isEmpty(),
+    // check("country", "El país es obligatorio.").not().isEmpty(),
+    // check("phone", "El teléfono debe ser un número válido.")
+      // .optional()
+      // .isNumeric(),
+    // check("city", "La cuidad es obligatoria.").not().isEmpty(),
+    // validateFields,
   ],
   createUser
 );
